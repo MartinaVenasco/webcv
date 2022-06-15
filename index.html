@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Martina Venasco - Designer & web developer</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Manjari:wght@100;400;700&display=swap");
+    </style>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <body>
+    <header class="main-header">
+      <nav class="main-nav" id="nav">
+        <img src="./images/miologo-01.png" />
+        <ul>
+          <li>Home</li>
+          <li>Portfolio</li>
+          <li> <a href="#contact">Contact</a></li>
+        </ul>
+        <button>Message</button>
+      </nav>
+    </header>
+    <section class="main-section">
+      <h1>Martina Venasco</h1>
+      <img src="./images/mia.jpg" class="mia"/>
+      <h2>about me</h2>
+      <p>
+        I am a visual communication designer. I own a complete knowledge of the
+        different graphic techniques related to the Adobe software tools. Expert
+        in visual communication and specialized in creation of logos, brands and
+        related corporate image. Average knowledge of web development tools, I'm
+        studying to employ my web development skills, improving Js, React etc.
+        Precise, punctual in the delivery of the tables commissioned and
+        motivated by strong passion for this profession and in particular for
+        advertising in general. My goal is to find the heart and values of each
+        project, so as to creating the best graphics to represent it.
+      </p>
+    </section>
+    <main class="main-content">
+      <section class="card">
+        <img src="./images/1.png" alt="first" />
+        <h3>Education</h3>
+        <h4>2017 - 2021 | Accademia di Belle Arti di Catania</h4>
+        <p>I level academic graduation in Visual Communication Design</p>
+        <h4>Giugno 2017 | S. Quasimodo Institute</h4>
+        <p>High school diploma Administration, finance and marketing sector</p>
+        <h4>2015 | Vega School</h4>
+        <p>Certificate of competences IT Comptia A+ Cisco Academy</p>
+      </section>
+      <section class="card">
+        <img src="./images/2.png" alt="second" />
+        <h3>Skills</h3>
+        <ul>
+          <li>
+            <h4>Computer knowledges</h4>
+            <p>
+              Full command of Office software; Complete knowledge of hardware
+              components, assistance, configuration and problem solving
+            </p>
+            <a class="circle" id="first-primo">●</a>
+            <a class="circle" id="first-secondo">●</a>
+            <a class="circle" id="first-terzo">●</a>
+            <a class="circle" id="first-quarto">●</a>
+            <a class="circle" id="first-quinto">●</a>
+          </li>
+          <li>
+            <h4>Graphic softwares</h4>
+            <p>
+              Complete knowledge of Illustrator, Indesign, Photoshop, After
+              Effects, Wordpress with Elementor. Medium experience in
+              development software such as Dreamweaver and Visual Studio
+            </p>
+
+            <a class="circle" id="second-primo">●</a>
+            <a class="circle" id="second-secondo">●</a>
+            <a class="circle" id="second-terzo">●</a>
+            <a class="circle" id="second-quarto">●</a>
+            <a class="circle" id="second-quinto">●</a>
+          </li>
+		  <li>
+            <h4>Languages level</h4>
+            <p>
+				<b>ENGLISH</b> - B1 level <br>
+				<b>FRENCH</b> - B2 level Delf Certification <br>
+				<b>SPANISH</b> - basic knowledge
+            </p>
+          </li>
+		  <li>
+            <h4>Driving license</h4>
+            <p>
+				LICENSE B EU
+            </p>
+          </li>
+        </ul>
+      </section>
+      <section class="card">
+        <img src="./images/3.png" alt="third" />
+        <h3>Work Experiences</h3>
+		<h4>03/2020 - 07-2020 |
+			Graphic designer full time
+			Web agency “Sicilio”</h4>
+        <p>- Graphic creation for web, social media
+			and editorial material for agencies aimed
+			at advertising tourism and commercial
+			activities in Sicily.</p>
+        <h4>2017 - 02/2020 | 
+			Self-employment</h4>
+        <p>- IT technician in assistance and
+			configuration of pc, smartphone and
+			tablet
+			- Freelance experiences in logo and
+			brand design, corporate image and web
+			design</p>
+        <h4>06/2017 - 08/2017 |
+			Fortè Ardiscount “Le Vanelle” Aidone</h4>
+        <p>Cashier, storekeeper, shelving arrangement</p>
+		<h4>2016 - 2017 |
+			Lochness Pub</h4>
+        <p>Bartender, employee arranging goods
+and table service</p>
+      </section>
+    </main>
+    <h2 class="carosello-title"> Some works about my portfolio</h2>
+    <div class="carosello">
+      <div class="slide1">
+        <img src="./images/slide1.jpg" style="width:100%">
+      </div>
+      <div class="slide1">
+        <img src="./images/slide2.jpg" style="width:100%">
+      </div>
+      <div class="slide1">
+        <img src="./images/slide3.jpg" style="width:100%">
+      </div>
+      <a class="prec" onclick="cambiaSlide(-1, 0)">&#10094;
+      </a>
+      <a class="succ" onclick="cambiaSlide(1, 0)">&#10095;
+      </a>
+    </div>
+    </div>
+    <script>
+      var slideTab = [1,1];
+      var slideId = []
+      var slides = document.getElementsByClassName("carosello");
+      for (var e = 1; e <= slides.length; e++){
+        slideId.push("slide"+e);
+      }
+      creaSlide(1, 0);
+      creaSlide(1, 1);
+      function cambiaSlide(n, no) {
+        creaSlide(slideTab[no] += n, no);
+      }
+      function creaSlide(n, no) {
+        var i;
+        var x = document.getElementsByClassName(slideId[no]);
+        if (n > x.length) {
+          slideTab[no] = 1}
+        if (n < 1) {
+          slideTab[no] = x.length}
+        for (i = 0; i < x.length; i++) {
+          x[i].style.display = "none";
+        }
+        x[slideTab[no]-1].style.display = "block";
+      }
+    </script>
+    <footer class="main-footer">
+     <section class="footer-elem">
+		<div class="testo">
+        <h3>Link rapidi</h3>
+        <p>Feedback</p>
+        <p>My studies</p>
+        <p>Portfolio</p>
+      </div>
+      <div class="contact">
+        <h3 id="contact">Contact</h3>
+        <p> <a href="http://gmail.com" class="fa fa-envelope"></a>martinavenasco@gmail.com</p>
+       
+        <p> <a href="http://facebook.com" class="fa fa-facebook" id="fb"> </a>MV Visual Designer</p></a>
+     
+         <p> <a href="http://instagram.com" class="fa fa-instagram"></a> @mv_visualdesigner</p></a>
+     
+      </div>
+	  <botton> <a href="#nav"> <img src="./images/scroll.png"></a></botton>
+    </section>
+
+
+</footer>
+  </body>
+</html>
